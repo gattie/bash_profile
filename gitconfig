@@ -13,8 +13,8 @@
 	ui = auto
 [color "branch"]
 	# good looking colors i copy/pasted from somewhere
-	current = green bold
-	local = green
+	current = cyan bold
+	local = green bold
 	remote = red bold
 [color "diff"]
 	# good looking colors i copy/pasted from somewhere
@@ -30,6 +30,4 @@
 [color "sh"]
 	branch = yellow
 [alias]
-        l = log --graph --date=short --decorate --format=format:%C(yellow)%h%Creset%x20%C(bold)%cd%Creset%C(yellow)%d%Creset%x20%an%x20%C(green)%s%Creset%x20%b
-        l = log --graph --date=short --decorate --format=format:%C(yellow)%h%Creset%x20%C(bold)%cd%Creset%C(yellow)%d%Creset%x20%an%x20%C(green)%s%Creset%x20%b
-
+  l = log --graph --date=short --decorate --oneline
