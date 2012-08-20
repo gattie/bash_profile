@@ -31,3 +31,5 @@
 	branch = yellow
 [alias]
   l = log --graph --date=short --decorate --oneline
+  co = checkout
+  br = branch
