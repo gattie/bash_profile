@@ -124,7 +124,7 @@ On_IPurple='\[\e[10;95m\]'  # Purple
 On_ICyan='\[\e[0;106m\]'    # Cyan
 On_IWhite='\[\e[0;107m\]'   # White
 
-PS1="\n$BBlack\[\016\]l\[\017\]($Blue\t \d$BBlack)-(\[$Green\w$BBlack)-($Green\$(files) files, \$(size)$BBlack)\n\
-\[\016\]m\[\017\]$BBlack\[\016\]\[\017\]($Blue\u@\h$BBlack)$Red\$(parse_git_branch)$BBlack\$ $Color_Off"
+PS1="\n$BBlack($Blue\t \d$BBlack)-(\[$Green\w$BBlack)-($Green\$(files) files, \$(size)$BBlack)\n\
+$BBlack\[\016\]\[\017\]($Blue\u@\h$BBlack)$Red\$(parse_git_branch)$BBlack\$ $Color_Off"
 
 #PS1="[\u@\h \W]\$(parse_git_branch) \\$"
