@@ -31,6 +31,6 @@
 [color "sh"]
 	branch = yellow
 [alias]
-	l  = log --graph --date=short --decorate --oneline
+	l  = log --graph --date=short --decorate --oneline --all
  	co = checkout
 	br = branch
