@@ -1,9 +1,9 @@
 [user]
 	name  = Matt Gaspar
-	email = gattie@gmail.com
+	email = mgaspar@godaddy.com
 [core]
 	# two-space tabs
-	pager  = less -FXRS -x2
+	pager  = less -FXR -x2
 	editor = vim
 [color]
 	# turn on color
@@ -31,6 +31,7 @@
 [color "sh"]
 	branch = yellow
 [alias]
-	l  = log --graph --date=short --decorate --oneline --all
+  l  = log --graph --date=short --decorate --oneline --all
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
  	co = checkout
 	br = branch
