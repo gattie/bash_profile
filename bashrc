@@ -7,4 +7,4 @@ fi
 
 # User specific aliases and functions
 alias tmux='tmux -2'
-export LANG=en_US
+#export LANG=en_US.UTF-8
