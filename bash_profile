@@ -5,14 +5,20 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+declare -x CLICOLOR="yes"
+declare -x LSCOLORS="exfxcxdxbxexexabagacad"
+declare -x LS_OPTIONS="--color=auto"
+declare -x HISTTIMEFORMAT='%F %T '
+alias ll='ls -lF'
+
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/bin:/opt/bin
+PATH=$PATH:$HOME/bin:/opt/bin:/usr/local/mysql/bin
 
 export PATH
 
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \[\1\]/'
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \(\1\)/'
 }
 
 function files {
@@ -126,4 +132,15 @@ On_IWhite='\[\e[0;107m\]'   # White
 
 #PS1="\n$BBlack(\[$Green\w$BBlack)\n$BBlack\[\016\]\[\017\]($Blue\u@\h$BBlack)$Red\$(parse_git_branch)$BBlack\$ $Color_Off"
 
-PS1="\n$IBlack\[\016\]l\[\017\][\T] ($Green\w$IBlack)\n\[\016\]m\[\017\]$BYellow\u$BWhite@$Blue\h$IRed\$(parse_git_branch) $IBlack\$ $Color_Off"
+PS1="$IBlack[\T] ($Green\w$IBlack)\n$Yellow\u$BWhite@$Blue\h$IRed\$(parse_git_branch) $IBlack\$ $Color_Off"
+
+##
+# Your previous /Users/mgaspar/.bash_profile file was backed up as /Users/mgaspar/.bash_profile.macports-saved_2013-07-03_at_19:14:27
+##
+
+# MacPorts Installer addition on 2013-07-03_at_19:14:27: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - /bin/bash)"
